@@ -13,7 +13,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans antialiased bg-brand-brown min-h-screen">
+<body class="font-sans antialiased bg-brand-cream min-h-screen">
     
     <!-- Navigation Header -->
     <nav class="bg-brand-cream text-brand-brown p-6">
