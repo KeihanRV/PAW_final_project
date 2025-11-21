@@ -1,5 +1,4 @@
-<x-guest-layout>
-    <x-slot name="title">ARCH - Login</x-slot>
+<x-guest-layout title="Login">
     <div class="flex flex-col md:flex-row bg-brand-cream rounded-2xl shadow-xl overflow-hidden">
 
         <div class="hidden md:flex md:w-1/2 bg-login-image bg-cover bg-center p-12 flex-col justify-end relative">
@@ -11,12 +10,12 @@
 
         <div class="w-full md:w-1/2 p-8 sm:p-12">
             
-        <div class="mb-8">
-            <img src="{{ asset('images/logo.png') }}" alt="ARCH Logo" class="h-12"> 
-        </div>
+            <div class="mb-8">
+                <img src="{{ asset('images/logo.png') }}" alt="ARCH Logo" class="h-12"> 
+            </div>
 
             <h2 class="text-3xl text-center text-brand-brown mb-2">Login</h2>
-            <p class="text-gray-600 text-center mb-6">Fill your data below</p>
+            <p class="text-brand-brown text-center mb-6">Fill your data below</p>
 
             <x-auth-session-status class="mb-4" :status="session('status')" />
 

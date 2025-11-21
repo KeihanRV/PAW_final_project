@@ -6,3 +6,7 @@ input[type="password"]::-ms-reveal,
 input[type="password"]::-webkit-password-reveal-button {
     display: none;
 }
+
+.font-reenie {
+    font-family: "Reenie Beanie", cursive !important;
+}
