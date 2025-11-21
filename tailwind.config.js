@@ -13,18 +13,19 @@ export default {
         extend: {
             fontFamily: {
                 sans: ["Fredoka", ...defaultTheme.fontFamily.sans],
-                orator: ["Orator Std", "sans-serif"],
+                orator: ["Orator Std", "monospace"],
+                reenie: ['"Reenie Beenie"', "cursive"],
             },
             colors: {
-                'brand-page-bg': '#73553C', // Background halaman luar (OK)
-                'brand-card-bg': '#D9D1BD', // Background halaman luar (OK)
-                'brand-cream': '#D9D1BD',   // <-- INI untuk background kartu
-                'brand-brown': '#4A3F35',   // <-- INI untuk input DAN teks gelap
-                'brand-orange': '#F9A826',  // Tombol submit
-                'brand-orange-hover': '#E89A1F', // Hover tombol submit
+                'brand-page-bg': '#73553C',
+                'brand-card-bg': '#D9D1BD', 
+                'brand-cream': '#D9D1BD',   
+                'brand-brown': '#4A3F35',   
+                'brand-orange': '#F9A826',
+                'brand-orange-hover': '#E89A1F',
+                'brand-second': '#E3D7BA',
             },
             backgroundImage: {
-                // Definisikan gambar Anda di sini
                 "login-image": "url('../images/login-bg.jpg')",
                 "register-image": "url('../images/register-bg.jpg')",
                 "forgot-image": "url('../images/forgot-bg.jpg')",

@@ -1,5 +1,4 @@
-@props(['align' => 'right', 'width' => '48', 'contentClasses' => 'py-1 bg-white dark:bg-gray-700'])
-
+@props(['align' => 'right', 'width' => '48', 'contentClasses' => 'py-1 bg-transparent'])
 @php
 $alignmentClasses = match ($align) {
     'left' => 'ltr:origin-top-left rtl:origin-top-right start-0',
