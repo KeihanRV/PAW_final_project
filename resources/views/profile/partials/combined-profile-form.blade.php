@@ -103,7 +103,7 @@
                 {{ __('Final Confirmation') }}
             </h2>
 
-            <p class="mt-1 text-brand-brown font-reenie text-2xl">
+            <p class="mt-1 text-brand-brown text-lg">
                 {{ __('Please enter your password to confirm you would like to permanently delete your account.') }}
             </p>
 

@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function () {
         return view('user/soon');
     })->name('journal');
     Route::get('/user/About Us', function () {
-        return view('user/soon');
+        return view('user/about');
     })->name('about');
 
     Route::get('/dashboard', function () {

@@ -17,7 +17,7 @@
                     Journal
                 </x-footer-link>
 
-                <x-footer-link href="#">
+                <x-footer-link :href="route('about')">
                     About Us
                 </x-footer-link>
 
