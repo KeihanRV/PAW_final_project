@@ -2,37 +2,60 @@
     
     <div class="bg-brand-cream min-h-screen pb-24 relative">
         
-        <div class="max-w-6xl mx-auto px-6 lg:px-8"> <x-dashboard.header />
+        <div class="max-w-6xl mx-auto px-6 lg:px-8"> 
+            
+            <x-dashboard.header />
 
-            <div class="mt-12 text-center"> 
-                <x-dashboard.section-title>
-                    Latest Collection
-                </x-dashboard.section-title>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 px-4 mt-16 items-start">
+            @if($postcards->isEmpty())
                 
-                @forelse($postcards as $postcard)
-                    <div class="{{ $loop->iteration % 2 == 0 ? 'delay-200' : '' }} w-full">
+                <div class="mt-12 text-center"> 
+                    <x-dashboard.section-title>
+                        Latest Collection
+                    </x-dashboard.section-title>
+                </div>
+
+                <div class="mt-16 text-center py-12">
+                    <p class="font-reenie text-4xl text-brand-brown opacity-60">
+                        No postcards have been written yet...
+                    </p>
+                </div>
+
+            @else
+
+                @foreach($postcards->groupBy('continent') as $continent => $items)
+                    
+                    <div class="mb-24">
                         
-                        <x-dashboard.card 
-                            :title="$postcard->city . ' - ' . $postcard->country" 
-                            :image="asset($postcard->image)"
-                            :description="$postcard->description"
-                            :continent="$postcard->continent"
-                            :date="$postcard->created_at->format('F d, Y')"
-                        />
+                        <div class="mt-12 text-center"> 
+                            <x-dashboard.section-title>
+                                {{ $continent }}
+                            </x-dashboard.section-title>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 px-4 mt-16 items-start">
+                            
+                            @foreach($items as $postcard)
+                                <div class="{{ $loop->iteration % 2 == 0 ? 'delay-200' : '' }} w-full">
+                                    
+                                    <x-dashboard.card 
+                                        :title="$postcard->city . ' - ' . $postcard->country" 
+                                        :image="asset($postcard->image)"
+                                        :description="$postcard->description"
+                                        :continent="$postcard->continent"
+                                        :date="$postcard->created_at->format('F d, Y')"
+                                    />
+
+                                </div>
+                            @endforeach
+
+                        </div>
 
                     </div>
-                @empty
-                    <div class="col-span-full text-center py-12">
-                        <p class="font-reenie text-4xl text-brand-brown opacity-60">
-                            No postcards have been written yet...
-                        </p>
-                    </div>
-                @endforelse
+                    
+                @endforeach
 
-            </div>
+            @endif
+
         </div>
 
     </div>

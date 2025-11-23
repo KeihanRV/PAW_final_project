@@ -31,11 +31,13 @@ Route::middleware('auth')->group(function () {
         return view('dashboard', compact('postcards'));
     })->name('dashboard');
 
+    Route::patch('/profile/avatar', [ProfileController::class, 'updateAvatar'])->name('profile.avatar');
+
     Route::get('/postcard/{postcard}', [PostcardController::class, 'show'])->name('postcard.show');
 
     Route::get('/cek-php', function () {
         return [
-            'File Config yang Dipakai' => php_ini_loaded_file(), // <--- INI KUNCINYA
+            'File Config yang Dipakai' => php_ini_loaded_file(),
             'Upload Max' => ini_get('upload_max_filesize'),
             'Post Max' => ini_get('post_max_size'),
         ];
