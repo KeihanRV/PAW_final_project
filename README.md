@@ -1,59 +1,169 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<img src="public/images/logo-light.png">
 
-## About Laravel
+**ARCH** adalah sebuah platform ruang digital yang dirancang untuk menemani proses menulis, merenung, dan merawat diri. Aplikasi ini memungkinkan pengguna untuk membuat jurnal sebagai kenangan yang dapat diingat. Harapannya di masa depan, ARCH dapat digunakan untuk membantu orang-orang dalam mengingat momen-momen berharga secara personal kepada orang lain.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Proyek ini dikembangkan sebagai **Final Project** untuk mata kuliah **Pemrograman Aplikasi Web**.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 👥 Kelompok 9
 
-## Learning Laravel
+  * **[Cheren Agatha Davona Syallom](www.instagram.com/cherenads)**
+  * **[Keihan Radja Vasya](www.instagram.com/khnharv)**
+  * **[Syatira Zulaikanisa](www.instagram.com/syatiraaz)**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 🛠️ Teknologi yang Digunakan (Tech Stack)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* **Framework Backend:** [Laravel 11](https://laravel.com) (PHP 8.2+)
+* **Frontend Tooling:** [Vite](https://vitejs.dev)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com)
+* **Templating Engine:** Blade
+* **Database:** MySQL (via XAMPP)
+* **Authentication:** Laravel Breeze
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 📋 Prasyarat (Prerequisites)
 
-### Premium Partners
+Sebelum menginstal proyek ini, pastikan komputer Anda telah terinstal:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+1.  **XAMPP** (Pastikan Apache & MySQL berjalan).
+2.  **PHP** (Minimal versi 8.2).
+3.  **Composer** (Package manager untuk PHP).
+4.  **Node.js & NPM** (Untuk compile aset frontend).
+5.  **Git** (Untuk clone repository).
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## ⚙️ Panduan Instalasi (Installation Guide)
 
-## Code of Conduct
+Ikuti langkah-langkah berikut secara berurutan di terminal (Command Prompt / Git Bash / PowerShell):
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 1. Clone Repository
+Unduh kode sumber proyek ke komputer lokal Anda.
+```bash
+git clone [https://github.com/KeihanRV/PAW_final_project.git](https://github.com/KeihanRV/PAW_final_project.git)
+cd PAW_final_project
+````
 
-## Security Vulnerabilities
+### 2\. Install Dependensi
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Install library PHP dan JavaScript yang dibutuhkan.
 
-## License
+**Backend (Laravel):**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+composer install
+```
+
+**Frontend (Node modules):**
+
+```bash
+npm install
+```
+
+### 3\. Konfigurasi Environment (.env)
+
+Duplikat file contoh konfigurasi `.env.example` menjadi `.env`.
+
+```bash
+cp .env.example .env
+```
+
+*(Untuk pengguna Windows Command Prompt: `copy .env.example .env`)*
+
+### 4\. Generate App Key
+
+Buat kunci enkripsi aplikasi.
+
+```bash
+php artisan key:generate
+```
+
+-----
+
+## 🗄️ Setup Database
+
+1.  Buka **XAMPP Control Panel**, nyalakan **Apache** dan **MySQL**.
+2.  Buka browser dan akses [http://localhost/phpmyadmin](https://www.google.com/search?q=http://localhost/phpmyadmin).
+3.  Buat database baru dengan nama: **`paw_project`** (atau sesuai keinginan Anda).
+4.  Buka file **`.env`** di teks editor, cari dan sesuaikan konfigurasi database:
+
+<!-- end list -->
+
+```ini
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=paw_project
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 5\. Migrasi Database
+
+Jalankan perintah ini untuk membuat tabel-tabel yang diperlukan (Users, Postcards, dll):
+
+```bash
+php artisan migrate
+```
+
+### 6\. Setup Storage
+
+Agar gambar profil dan gambar postcard bisa muncul, Anda wajib membuat *symbolic link*:
+
+```bash
+php artisan storage:link
+```
+
+-----
+
+## 🚀 Cara Menjalankan Aplikasi
+
+Anda memerlukan **dua terminal** yang berjalan bersamaan.
+
+**Terminal 1 (Menjalankan Server Laravel):**
+
+```bash
+php artisan serve
+```
+
+**Terminal 2 (Menjalankan Vite - Frontend):**
+
+```bash
+npm run dev
+```
+
+Setelah keduanya berjalan, buka browser dan akses:
+👉 **http://127.0.0.1:8000**
+
+-----
+
+## ⚠️ Konfigurasi Khusus & Troubleshooting
+
+### 1\. Mengizinkan Upload Gambar Besar (\>2MB)
+
+Aplikasi ini dikonfigurasi untuk menerima upload gambar hingga **40MB**. Agar fitur ini berjalan di XAMPP/Apache, Anda perlu memastikan konfigurasi server sudah benar.
+
+**Cek file `public/.htaccess`:**
+Pastikan kode berikut ada di baris paling bawah file tersebut:
+
+```apache
+php_value upload_max_filesize 50M
+php_value post_max_size 50M
+php_value memory_limit 256M
+```
+
+*Catatan: Jika Anda hanya menggunakan `php artisan serve` tanpa Apache/XAMPP, Anda mungkin perlu mengedit file `php.ini` secara manual.*
+
+### 2\. Gambar Tidak Muncul (Broken Image)
+
+Jika gambar yang diupload tidak muncul:
+
+1.  Hapus folder `public/storage`.
+2.  Jalankan ulang perintah: `php artisan storage:link`.
+
+-----
+
+# Selamat menggunakan!
