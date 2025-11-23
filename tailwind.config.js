@@ -24,6 +24,9 @@ export default {
                 'brand-orange': '#F9A826',
                 'brand-orange-hover': '#E89A1F',
                 'brand-second': '#E3D7BA',
+                'brand-input-bg': '#E3D7BA',
+                'brand-red': '#D92525',
+
             },
             backgroundImage: {
                 "login-image": "url('../images/login-bg.jpg')",
