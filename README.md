@@ -9,9 +9,9 @@ Proyek ini dikembangkan sebagai **Final Project** untuk mata kuliah **Pemrograma
 
 ## 👥 Kelompok 9
 
-  * **[Cheren Agatha Davona Syallom](www.instagram.com/cherenads)**
-  * **[Keihan Radja Vasya](www.instagram.com/khnharv)**
-  * **[Syatira Zulaikanisa](www.instagram.com/syatiraaz)**
+  * **[Cheren Agatha Davona Syallom](https://instagram.com/cherenads)**
+  * **[Keihan Radja Vasya](https://instagram.com/khnharv)**
+  * **[Syatira Zulaikanisa](https://instagram.com/syatiraaz)**
 
 ## 🛠️ Teknologi yang Digunakan (Tech Stack)
 
