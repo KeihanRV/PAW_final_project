@@ -5,6 +5,8 @@ use App\Http\Controllers\PostcardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Middleware\AdminMiddleware;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 Route::get('/', function () {
     return view('home');
