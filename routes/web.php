@@ -10,6 +10,21 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/reset-password-darurat', function () {
+    // 1. Cari user kamu
+    $user = User::where('email', 'hansharvey33@gmail.com')->first();
+    
+    if (!$user) {
+        return 'User tidak ditemukan!';
+    }
+
+    // 2. Set password baru (langsung Hash::make di sini biar aman)
+    $user->password = Hash::make('Harvey.33');
+    $user->save();
+
+    return 'BERHASIL! Password untuk hansharvey33@gmail.com sudah diubah menjadi: Harvey.33';
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
