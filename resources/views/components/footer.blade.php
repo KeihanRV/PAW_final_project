@@ -13,7 +13,7 @@
                     Dashboard
                 </x-footer-link>
 
-                <x-footer-link :href="route('journal')">
+                <x-footer-link :href="route('journal.index')">
                     Journal
                 </x-footer-link>
 

@@ -23,7 +23,7 @@
                             {{ __('Dashboard') }}
                         </x-nav-link>
 
-                        <x-nav-link :href="route('journal')" :active="request()->routeIs('journal')">
+                        <x-nav-link :href="route('journal.index')" :active="request()->routeIs('journal.index')">
                             {{ __('Journal') }}
                         </x-nav-link>
                         <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
@@ -90,7 +90,7 @@
             </x-responsive-nav-link>
             
             <!-- Journal Mobile Link -->
-            <x-responsive-nav-link :href="route('journal')" :active="request()->routeIs('journal')" class="font-orator text-brand-brown uppercase">
+            <x-responsive-nav-link :href="route('journal.index')" :active="request()->routeIs('journal.index')" class="font-orator text-brand-brown uppercase">
                 {{ __('Journal') }}
             </x-responsive-nav-link>
             
