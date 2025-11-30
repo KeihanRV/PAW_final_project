@@ -30,6 +30,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/journal', [JournalController::class, 'index'])->name('journal.index');
     Route::post('/journal', [JournalController::class, 'store'])->name('journal.store');
     Route::delete('/journal/{journal}', [JournalController::class, 'destroy'])->name('journal.destroy');
+    Route::put('/journal/{journal}', [JournalController::class, 'update'])->name('journal.update');
 
     // Profile Routes
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

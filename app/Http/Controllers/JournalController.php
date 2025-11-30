@@ -97,4 +97,71 @@ class JournalController extends Controller
         // Redirect kembali ke halaman buku (page 1 biar aman)
         return redirect()->route('journal.index')->with('success', 'Page torn out successfully.');
     }
+
+    // app/Http/Controllers/JournalController.php
+
+    public function update(Request $request, Journal $journal)
+    {
+        // Pastikan milik user sendiri
+        if ($journal->user_id !== Auth::id()) abort(403);
+
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'journal_date' => 'required|date',
+            'tags' => 'nullable|string', 
+            'content' => 'required|array', 
+        ]);
+
+        $tagsArray = json_decode($request->input('tags'), true) ?? [];
+        $finalContent = [];
+        $imageIndex = 0;
+
+        if ($request->has('content')) {
+            foreach($request->input('content') as $item) {
+                if (!isset($item['type'])) continue;
+
+                // TEXT
+                if($item['type'] === 'text') {
+                    if(!empty($item['value'])) {
+                        $finalContent[] = ['type' => 'text', 'value' => $item['value']];
+                    }
+                } 
+                // IMAGE
+                elseif($item['type'] === 'image') {
+                    // Jika user upload gambar BARU
+                    if($request->hasFile('images') && isset($request->file('images')[$imageIndex])) {
+                        $file = $request->file('images')[$imageIndex];
+                        $path = $file->store('journal-images', 'public');
+                        
+                        $finalContent[] = [
+                            'type' => 'image',
+                            'src' => $path,
+                            'caption' => $item['caption'] ?? ''
+                        ];
+                        $imageIndex++;
+                    } 
+                    // Jika user MEMPERTAHANKAN gambar LAMA (hidden input 'existing_src')
+                    elseif(isset($item['existing_src'])) {
+                        $finalContent[] = [
+                            'type' => 'image',
+                            'src' => $item['existing_src'],
+                            'caption' => $item['caption'] ?? ''
+                        ];
+                    }
+                }
+            }
+        }
+
+        $journal->update([
+            'title' => $request->input('title'),
+            'journal_date' => $request->input('journal_date'),
+            'tags' => $tagsArray,     
+            'content' => $finalContent, 
+        ]);
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Journal updated successfully!',
+        ]);
+    }
 }
