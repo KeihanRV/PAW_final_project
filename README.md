@@ -15,7 +15,7 @@ Proyek ini dikembangkan sebagai **Final Project** untuk mata kuliah **Pemrograma
 
 ## 🛠️ Teknologi yang Digunakan (Tech Stack)
 
-* **Framework Backend:** [Laravel 11](https://laravel.com) (PHP 8.2+)
+* **Framework Backend:** [Laravel 11](https://laravel.com) (PHP 8.3+)
 * **Frontend Tooling:** [Vite](https://vitejs.dev)
 * **Styling:** [Tailwind CSS](https://tailwindcss.com)
 * **Templating Engine:** Blade
