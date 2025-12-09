@@ -1,7 +1,7 @@
 
 <img src="public/images/logo-light.png">
 
-**ARCH** adalah sebuah platform ruang digital yang dirancang untuk menemani proses menulis, merenung, dan merawat diri. Aplikasi ini memungkinkan pengguna untuk membuat jurnal sebagai kenangan yang dapat diingat. Harapannya di masa depan, ARCH dapat digunakan untuk membantu orang-orang dalam mengingat momen-momen berharga secara personal kepada orang lain.
+**ARCH** adalah platform manajemen undangan digital yang dikembangkan sebagai Final Project mata kuliah Pemrograman Aplikasi Web. Dirancang khusus untuk lingkungan Fakultas Ilmu Komputer (FILKOM), aplikasi ini mengotomatisasi proses pembuatan undangan dengan mengintegrasikan sistem langsung ke pangkalan data fakultas. Fitur utamanya memungkinkan pengguna untuk memilih penerima (mahasiswa/dosen) langsung dari database tanpa perlu input manual (typo-free), memastikan setiap undangan terkirim dengan identitas yang akurat dan presisi. Harapannya, ARCH dapat menjadi solusi praktis yang efisien untuk menjembatani komunikasi kegiatan akademik maupun organisasi di lingkungan kampus.
 
 Proyek ini dikembangkan sebagai **Final Project** untuk mata kuliah **Pemrograman Aplikasi Web**.
 
